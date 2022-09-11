@@ -7,5 +7,11 @@ exports.error = (request, response) => {
 };
 
 exports.mainpage = (request, response) => {
-    response.render('mainpage');
+    let clanky = model.vypsatClanky();
+
+    response.render('mainpage',{
+        titulek: 'články',
+        klient: 'clanky',
+        clanky,
+    }); 
 }

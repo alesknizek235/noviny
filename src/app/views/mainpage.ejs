@@ -9,7 +9,15 @@
 <body>
     <%- include("../www/hlavicka.ejs") -%>
 
-    
+    <article>
+        <a href="/redakce_heslo">Redakce</a>
+        <h2>články</h2>
+        <main class="main">
+            <% for(let i in clanky){ %>
+                <div class="clanky" id=<%= clanky[i].id %>onclick="location.href='/main/detail/<%= clanky[i].id %>'"> <%= clanky[i].nadpis %></div>
+            <% } %>
+        </main>
+    </article>
 
     <%- include("../www/paticka.ejs") -%>
 </body>
