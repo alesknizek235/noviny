@@ -9,3 +9,9 @@ exports.vypsatClanky = () => {
     delete clanky['next_id'];
     return clanky;
 }
+
+exports.detail = (id) => {
+    let data = db.JSON();
+    let clanek = data[id];
+    return clanek; 
+}

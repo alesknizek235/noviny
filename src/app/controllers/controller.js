@@ -15,3 +15,16 @@ exports.mainpage = (request, response) => {
         clanky,
     }); 
 }
+
+exports.detail = (request, response) =>{
+    let id = request.params.id;
+    let clanek = model.detail(id);
+
+    if(clanek) {
+        response.render('detail', {
+            clanek, id
+        });
+    } else {
+        response.redirect('/');
+    }
+}

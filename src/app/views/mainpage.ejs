@@ -14,7 +14,7 @@
         <h2>články</h2>
         <main class="main">
             <% for(let i in clanky){ %>
-                <div class="clanky" id=<%= clanky[i].id %>onclick="location.href='/main/detail/<%= clanky[i].id %>'"> <%= clanky[i].nadpis %></div>
+                <div class="clanky" id="<%= clanky[i].id %>" onclick="location.href='/main/detail/<%= clanky[i].id %>'"> <%= clanky[i].nadpis %></div>
             <% } %>
         </main>
     </article>
