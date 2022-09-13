@@ -1,3 +1,7 @@
 # noviny
 
-potřeba přidat .env soubor (PORT=8000, HOSTNAME=localhost) do složky src
+potřeba přidat .env soubor (
+    PORT=8000
+    HOSTNAME=localhost
+    HESLO=heslo
+) do složky src
