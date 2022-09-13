@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redakce</title>
+</head>
+<body>
+    <header>
+        <h1>Redakční režim</h1>
+    </header>
+    <main>
+        <a href="/mainpage">zpět na články</a>
+        <h2>Přidání článku</h2>
+        <form id="myForm" action="/main/pridatClanek" method="post">
+            Autor:<input type="text" name="autor" id="autor"/><br>
+            Nadpis:<input type="text" name="nadpis" id="nadpis">
+            
+            <div>
+                <label for="obsah"></label>
+                <p>Obsah:</p>
+                <textarea name="obsah" id="obsah" required rows="3" cols="40"></textarea>
+            </div>
+            <input type="submit" value="Přidat">
+
+        </form>
+    </main>
+    <%- include("../www/paticka.ejs") -%>
+
+
+</body>
+</html>
